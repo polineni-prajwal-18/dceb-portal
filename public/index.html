@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>District Common Examination Board - Sri Sathya Sai District</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Blobs for Glassmorphism -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Frosted Glass Header -->
+    <header class="site-header glass-header">
+        <div class="container header-main">
+            <div class="brand" onclick="switchTab('home')">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="gov-tag">GOVERNMENT OF ANDHRA PRADESH</span>
+                    <h1>District Common Examination Board</h1>
+                    <p>Sri Sathya Sai District, Puttaparthi</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn btn-teal" onclick="switchTab('payment')">
+                    <i class="fa-solid fa-credit-card"></i> Pay Exam / TC Fee
+                </button>
+                <button class="btn btn-coral" onclick="switchTab('tc-app')">
+                    <i class="fa-solid fa-file-signature"></i> TC Application
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- News Ticker -->
+        <div class="ticker-bar">
+            <div class="container ticker-inner">
+                <span class="badge-update">LIVE UPDATES</span>
+                <div class="marquee-wrapper">
+                    <p class="marquee-text">
+                        Mission March 2027 Action Plan released &nbsp;|&nbsp; Payment Portal for Exam & TC Fees active for Academic Year 2026-27
+                    </p>
+                </div>
+                <div class="contact-mini">
+    <a href="tel:+918179515136" class="ticker-contact-link" title="Call or open dialer with +91 8179515136">
+        <i class="fa-solid fa-phone"></i> +91 8179515136
+    </a>
+    <a href="mailto:dcebsrisatyasai@gmail.com" class="ticker-contact-link" title="Compose email to dcebsrisatyasai@gmail.com">
+        <i class="fa-solid fa-envelope"></i> dcebsrisatyasai@gmail.com
+    </a>
+</div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="main-nav glass-nav" id="mainNav">
+            <div class="container nav-container">
+                <button class="nav-link active" data-target="home" onclick="switchTab('home')">
+                    <i class="fa-solid fa-house"></i> Home
+                </button>
+                <button class="nav-link" data-target="fees" onclick="switchTab('fees')">
+                    <i class="fa-solid fa-indian-rupee-sign"></i> DCEB Fee Structure 2026-27
+                </button>
+                <button class="nav-link" data-target="payment" onclick="switchTab('payment')">
+                    <i class="fa-solid fa-link"></i> Direct Fee Payment Link
+                </button>
+                <button class="nav-link" data-target="tc-app" onclick="switchTab('tc-app')">
+                    <i class="fa-solid fa-book-open"></i> TC BOOK Application
+                </button>
+                <button class="nav-link" data-target="mission-march" onclick="switchTab('mission-march')">
+                    <i class="fa-solid fa-bullseye"></i> Mission March 2027 Programme
+                </button>
+                <button class="nav-link" data-target="calendars" onclick="switchTab('calendars')">
+                    <i class="fa-solid fa-calendar-days"></i> Academic Calendars
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Dynamic Content Viewport -->
+    <main class="container main-viewport">
+
+        <!-- ================= VIEW 1: HOME ================= -->
+        <section id="view-home" class="tab-view active">
+            <div class="hero-banner glass-hero">
+                <div class="hero-content">
+                    <span class="pill-badge"><i class="fa-solid fa-sparkles"></i> Official Digital Portal</span>
+                    <h2>Academic Excellence - Assessment Management</h2>
+                    <p>Streamlining question paper distribution, conduct of examinations, evaluation standardizations, and educational progress monitoring across Sri Sathya Sai District.</p>
+                    <div class="hero-btns">
+                        <button class="btn btn-gold" onclick="switchTab('mission-march')">
+                            Explore Mission March 2027 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-glass" onclick="switchTab('fees')">
+                            View 2026-27 Fee Structure
+                        </button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-school hero-watermark"></i>
+            </div>
+
+            <!-- 4 Quick Service Cards -->
+            <div class="grid-4 cards-section">
+                <div class="service-card glass-card" onclick="switchTab('fees')">
+                    <div class="icon-box sun"><i class="fa-solid fa-receipt"></i></div>
+                    <h3>Fee Structure 2026-27</h3>
+                    <p>Detailed fee details for Formative, Summative, and TC Books.</p>
+                    <span class="card-link coral-text">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card glass-card" onclick="switchTab('payment')">
+                    <div class="icon-box mint"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>Direct Payment</h3>
+                    <p>Pay Examination Fee / Transfer Certificate Fee online via SBI Collect.</p>
+                    <span class="card-link teal-text">Pay Now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card glass-card" onclick="switchTab('tc-app')">
+                    <div class="icon-box sky"><i class="fa-solid fa-book"></i></div>
+                    <h3>TC Book Indent</h3>
+                    <p>Submit online application form for official Transfer Certificate Books.</p>
+                    <span class="card-link indigo-text">Apply Online <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card glass-card" onclick="switchTab('mission-march')">
+                    <div class="icon-box iris"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Mission March 2027</h3>
+                    <p>Special action plan, model papers, and guidelines for SSC Public Exams 2027.</p>
+                    <span class="card-link violet-text">Access Program <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Notices & Headmasters Guide -->
+            <div class="grid-asymmetric">
+                <div class="panel-card glass-card">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-bell text-sun"></i> Important Notices</h3>
+                        <span class="tag-latest">Latest</span>
+                    </div>
+                    <div class="notice-list">
+                        <div class="notice-item border-indigo">
+                            <small>Nov 02, 2026</small>
+                            <p>DCEB Fee collection deadline extended for Academic Year 2026-27.</p>
+                        </div>
+                        <div class="notice-item border-sun">
+                            <small>Oct 28, 2026</small>
+                            <p>Release of Academic Calendar for Term-2 Examinations.</p>
+                        </div>
+                        <div class="notice-item border-mint">
+                            <small>Oct 15, 2026</small>
+                            <p>Guidelines for Headmasters on submitting online TC Book requisitions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-card glass-card">
+                    <div class="panel-header-col">
+                        <h3><i class="fa-solid fa-list-check text-indigo"></i> Headmasters' Portal User Guide & Procedure</h3>
+                        <p class="subtitle">Step-by-step procedure for School Headmasters & Principals to complete DCEB processes:</p>
+                    </div>
+                    <div class="steps-list">
+                        <div class="step-box glass-subtle">
+                            <span class="step-num">1</span>
+                            <div>
+                                <h4>Calculate Student Strength & Fee</h4>
+                                <p>Check the official <strong>DCEB Fee Structure 2026-27</strong> tab to calculate total fee payable based on class enrollment (Classes I to X).</p>
+                            </div>
+                        </div>
+                        <div class="step-box glass-subtle">
+                            <span class="step-num">2</span>
+                            <div>
+                                <h4>Online Fee Remittance</h4>
+                                <p>Click on <strong>Direct Fee Payment Link</strong> to pay via SBI Collect / Treasury Portal. Download the DU Reference Payment Receipt.</p>
+                            </div>
+                        </div>
+                        <div class="step-box glass-subtle">
+                            <span class="step-num">3</span>
+                            <div>
+                                <h4>Apply for TC Books & Question Papers</h4>
+                                <p>Submit the online application in <strong>TC BOOK Application</strong> tab with your School UDISE Code and Payment Receipt Number.</p>
+                            </div>
+                        </div>
+                        <div class="step-box glass-subtle">
+                            <span class="step-num">4</span>
+                            <div>
+                                <h4>Follow Academic Schedule & Mission March 2027</h4>
+                                <p>Download syllabus breakups, timetable, and model papers under <strong>Academic Calendars</strong> and <strong>Mission March 2027</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 2: FEE STRUCTURE ================= -->
+        <section id="view-fees" class="tab-view">
+            <div class="panel-card glass-card">
+                <div class="section-top-bar">
+                    <div>
+                        <h2 class="section-title">DCEB Approved Fee Structure (2026-27)</h2>
+                        <p class="subtitle">Sri Sathya Sai District Educational Authority Norms for Primary, Upper Primary & High Schools</p>
+                    </div>
+                    <button class="btn btn-glass-dark" onclick="window.print()">
+                        <i class="fa-solid fa-print"></i> Print Fee Circular
+                    </button>
+                </div>
+
+                <div class="grid-3 fee-highlights">
+                    <div class="highlight-box box-sky">
+                        <span class="box-label text-sky">GOVT MANAGEMENT SCHOOLS</span>
+                        <div class="price-tag">₹ 00.00 <small>/ student</small></div>
+                        <p>Covers 4 Formative & 2 Summative Tests</p>
+                    </div>
+                    <div class="highlight-box box-sun">
+                        <span class="box-label text-sun">PRIVATE MANAGEMENT SCHOOLS</span>
+                        <div class="price-tag">₹ --.-- <small>/ student</small></div>
+                        <p>Covers 4 Formative & 2 Summative Tests</p>
+                    </div>
+                    <div class="highlight-box box-mint">
+                        <span class="box-label text-mint">TC BOOK (100 LEAVES)</span>
+                        <div class="price-tag">₹ --.-- <small>/ book</small></div>
+                        <p>Official Government Registered Book</p>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>CATEGORY / CLASS</th>
+                                <th>FORMATIVE EXAM FEE</th>
+                                <th>SUMMATIVE EXAM FEE</th>
+                                <th>TOTAL ANNUAL EXAM FEE</th>
+                                <th>REMARKS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Section (Classes I to V)</strong></td>
+                                <td>₹ 00.00 (All 4 Tests)</td>
+                                <td>₹ 00.00 (SA1 & SA2)</td>
+                                <td class="coral-text fw-bold">₹ 00.00</td>
+                                <td>Govt. / Management Schools</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Private Management Schools</strong></td>
+                                <td>₹ --.-- (All 4 Tests)</td>
+                                <td>₹ --.-- (SA1 & SA2)</td>
+                                <td class="coral-text fw-bold">₹ --</td>
+                                <td>Includes Answer Key papers</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Private Management High School (Classes VIII to X)</strong></td>
+                                <td>₹ --.-- (All 4 Tests)</td>
+                                <td>₹ --.-- (SA1 & Pre-Public)</td>
+                                <td class="coral-text fw-bold">₹ --</td>
+                                <td>Includes OMR & Model Papers</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transfer Certificate (TC) Book</strong></td>
+                                <td colspan="2">Standard 100 Sheets Duplicate Format</td>
+                                <td class="teal-text fw-bold">₹ --.-- / Book</td>
+                                <td>Inclusive of Printing & Dispatch</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert-box-sun">
+                    <strong><i class="fa-solid fa-circle-info"></i> Remittance Instructions for HMs:</strong>
+                    <ol>
+                        <li>Exam Fee must be calculated based on the UDISE enrollment data as of September 2026.</li>
+                        <li>Payment must be made strictly through the official online payment gateway (CFMS/SBI Collect) only. Cash payment is strictly prohibited.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 3: DIRECT PAYMENT ================= -->
+        <section id="view-payment" class="tab-view">
+            <div class="panel-card glass-card narrow-card">
+                <div class="form-header-center">
+                    <div class="circle-icon mint"><i class="fa-solid fa-building-columns"></i></div>
+                    <h2>DCEB Online Payment Gateway</h2>
+                    <p class="subtitle">Direct portal for Examination Fee & TC Book Fee Payment for Sri Sathya Sai District Schools</p>
+                </div>
+
+                <form id="paymentForm" class="styled-form-box glass-subtle">
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>SCHOOL UDISE CODE *</label>
+                            <input type="text" placeholder="e.g., 28220100101" maxlength="11" required>
+                        </div>
+                        <div class="form-group">
+                            <label>SCHOOL NAME *</label>
+                            <input type="text" placeholder="ZPHS / MPUPS / Private School" required>
+                        </div>
+                        <div class="form-group">
+                            <label>MANDAL *</label>
+                            <select required>
+                                <option value="">Select Mandal</option>
+                                <option>Puttaparthi</option>
+                                <option>Dharmavaram</option>
+                                <option>Hindupur</option>
+                                <option>Kadiri</option>
+                                <option>Penukonda</option>
+                                <option>Madakasira</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>PAYMENT PURPOSE *</label>
+                            <select id="paymentPurpose" required>
+                                <option value="0">Select Purpose</option>
+                                <option value="150">TC Book Fee (₹150 / Book)</option>
+                                <option value="500">SA-1 & SA-2 Examination Fee</option>
+                                <option value="1000">SSC Pre-Public & Model Papers Fee</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>HEADMASTER / PRINCIPAL NAME *</label>
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>MOBILE NUMBER *</label>
+                            <input type="tel" placeholder="10-digit Phone Number" maxlength="10" required>
+                        </div>
+                    </div>
+
+                    <div class="fee-summary-strip">
+                        <div>
+                            <span class="strip-title">CALCULATED TOTAL FEE AMOUNT</span>
+                            <small>Including SBI Collect Gateway Transaction Charges</small>
+                        </div>
+                        <div class="strip-amount" id="calculatedFeeDisplay">₹ 0.00</div>
+                    </div>
+
+                    <div class="form-actions-row">
+                        <button type="submit" class="btn btn-teal btn-lg flex-grow">
+                            <i class="fa-solid fa-lock"></i> Proceed to Pay (SBI Collect)
+                        </button>
+                        <button type="button" class="btn btn-glass-dark btn-lg" onclick="alert('Opening Official SBI Collect Portal...')">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> External SBI Direct Link
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 4: TC BOOK APPLICATION ================= -->
+        <section id="view-tc-app" class="tab-view">
+            <div class="panel-card glass-card narrow-card">
+                <div class="section-header-border">
+                    <h2 class="section-title">Transfer Certificate (TC) Book Application Form</h2>
+                    <p class="subtitle">Requisition form for issuing official 100-leaf Transfer Certificate books to Recognised Schools</p>
+                </div>
+
+                <form id="tcApplicationForm">
+                    <div class="sub-card glass-subtle">
+                        <h4 class="sub-card-title"><i class="fa-solid fa-school coral-text"></i> School Details</h4>
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label>UDISE Code *</label>
+                                <input type="text" placeholder="11-digit UDISE" maxlength="11" required>
+                            </div>
+                            <div class="form-group">
+                                <label>School Name *</label>
+                                <input type="text" placeholder="As per Govt Records" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Management *</label>
+                                <select required>
+                                    <option value="">Select Management</option>
+                                    <option>Government</option>
+                                    <option>ZPP / MPP</option>
+                                    <option>Municipal</option>
+                                    <option>Private Aided</option>
+                                    <option>Private Unaided</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Mandal *</label>
+                                <input type="text" placeholder="Mandal Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-card glass-subtle">
+                        <h4 class="sub-card-title"><i class="fa-solid fa-book coral-text"></i> Requisition Details</h4>
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label>Number of TC Books Required *</label>
+                                <input type="number" id="tcBookQty" value="1" min="1" max="50" required>
+                                <small class="helper-text">Cost: ₹150 per book</small>
+                            </div>
+                            <div class="form-group">
+                                <label>SBI Collect DU Ref. Number *</label>
+                                <input type="text" placeholder="e.g., DUK1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Payment Date *</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Amount Paid (₹) *</label>
+                                <input type="number" id="tcAmountPaid" value="150" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="checkbox-row">
+                        <input type="checkbox" required>
+                        <span>I certify that the fee has been paid in full and the previous TC book details are updated in the school register.</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-indigo btn-block">Submit Indent Requisition</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 5: MISSION MARCH 2027 ================= -->
+        <section id="view-mission-march" class="tab-view">
+            <div class="violet-banner glass-hero-violet">
+                <span class="pill-violet"><i class="fa-solid fa-award"></i> Flagship Initiative</span>
+                <h2>MISSION MARCH 2027 PROGRAMME</h2>
+                <p>A target-driven academic initiative designed by DCEB Sri Sathya Sai District to achieve 100% success and high GPAs in SSC Public Examinations March 2027.</p>
+            </div>
+
+            <div class="grid-3 cards-section">
+                <div class="service-card glass-card">
+                    <div class="num-badge">1</div>
+                    <h3>Special Remedial Classes</h3>
+                    <p>Dedicated 1-hour morning and evening preparation sessions for C & D grade students based on baseline assessments.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="num-badge">2</div>
+                    <h3>Weekly Slip Tests</h3>
+                    <p>Standardized chapter-wise tests every Friday prepared by district subject expert committees.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="num-badge">3</div>
+                    <h3>3-Stage Pre-Public Exams</h3>
+                    <p>Replicating public exam conditions in January and February 2027 with centralized valuation.</p>
+                </div>
+            </div>
+
+            <div class="panel-card glass-card">
+                <h3 class="section-subtitle"><i class="fa-solid fa-download violet-text"></i> Mission March 2027 Resources & Study Material</h3>
+                <div class="grid-3 resource-grid">
+                    <div class="resource-item glass-subtle" onclick="alert('Downloading Class 10 Blueprints PDF...')">
+                        <div>
+                            <h4>Class 10 Blueprints & Weightage</h4>
+                            <small>All Subjects 2026-27</small>
+                        </div>
+                        <span class="file-badge">PDF</span>
+                    </div>
+                    <div class="resource-item glass-subtle" onclick="alert('Downloading Model Question Papers ZIP...')">
+                        <div>
+                            <h4>Model Question Papers</h4>
+                            <small>Set 1, Set 2 & Set 3</small>
+                        </div>
+                        <span class="file-badge">ZIP</span>
+                    </div>
+                    <div class="resource-item glass-subtle" onclick="alert('Downloading Slow Learners Study Material PDF...')">
+                        <div>
+                            <h4>Slow Learners Study Material</h4>
+                            <small>Minimum Level Learning (MLL)</small>
+                        </div>
+                        <span class="file-badge">PDF</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 6: ACADEMIC CALENDARS ================= -->
+        <section id="view-calendars" class="tab-view">
+            <div class="panel-card glass-card">
+                <div class="section-top-bar">
+                    <div>
+                        <h2 class="section-title">DCEB Academic & Examination Calendars</h2>
+                        <p class="subtitle">Schedule of Assessments & Academic Activities for Academic Year 2026-27</p>
+                    </div>
+                    <a href="link" class="btn btn-coral" target="_blank" rel="noopener">
+    <i class="fa-solid fa-file-pdf"></i> Download Calendar (PDF)
+</a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ASSESSMENT NAME</th>
+                                <th>CLASSES COVERED</th>
+                                <th>PROPOSED SCHEDULE DATE</th>
+                                <th>SYLLABUS COVERAGE</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Formative Assessment 1 (FA-1)</strong></td>
+                                <td>I to X</td>
+                                <td>August 2026</td>
+                                <td>June & July Syllabus</td>
+                                <td><span class="status-pill gray">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Formative Assessment 2 (FA-2)</strong></td>
+                                <td>I to X</td>
+                                <td>October 2026</td>
+                                <td>August & September Syllabus</td>
+                                <td><span class="status-pill gray">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Summative Assessment 1 (SA-1)</strong></td>
+                                <td>I to X</td>
+                                <td>November 2026</td>
+                                <td>50% Cumulative Syllabus</td>
+                                <td><span class="status-pill mint">Ongoing</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Formative Assessment 3 (FA-3)</strong></td>
+                                <td>I to X</td>
+                                <td>December 2026</td>
+                                <td>November Syllabus</td>
+                                <td><span class="status-pill sun">Upcoming</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Formative Assessment 4 (FA-4)</strong></td>
+                                <td>I to X</td>
+                                <td>January 2027</td>
+                                <td>December & January Syllabus</td>
+                                <td><span class="status-pill sun">Upcoming</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pre-Public Exam (Class X)</strong></td>
+                                <td>X Class</td>
+                                <td>February 2027</td>
+                                <td>100% Total Syllabus</td>
+                                <td><span class="status-pill violet">Mission March</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Summative Assessment 2 (SA-2)</strong></td>
+                                <td>I to IX</td>
+                                <td>April 2027</td>
+                                <td>Annual Syllabus</td>
+                                <td><span class="status-pill gray">Scheduled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile App-Style Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile Quick Navigation">
+        <button class="bottom-nav-btn active" data-target="home" onclick="switchTab('home')">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </button>
+        <button class="bottom-nav-btn" data-target="fees" onclick="switchTab('fees')">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span>Fees</span>
+        </button>
+        <button class="bottom-nav-btn" data-target="payment" onclick="switchTab('payment')">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Pay</span>
+        </button>
+        <button class="bottom-nav-btn" data-target="mission-march" onclick="switchTab('mission-march')">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>March '27</span>
+        </button>
+        <button class="bottom-nav-btn" data-target="calendars" onclick="switchTab('calendars')">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Calendar</span>
+        </button>
+    </nav>
+
+    <!-- Persistent Footer -->
+    <footer class="site-footer glass-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>District Common Examination Board</h4>
+                <p>O/o District Educational Officer, Sri Sathya Sai District, Puttaparthi, Andhra Pradesh.</p>
+            </div>
+            <div>
+                <h4>Quick Access</h4>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="switchTab('fees')">Fee Circular 2026-27</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchTab('payment')">Online SBI Collect Payment</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchTab('tc-app')">TC Book Indent Form</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchTab('mission-march')">Mission March 2027 Action Plan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact & Support</h4>
+                <p><i class="fa-solid fa-user-tie"></i> DCEB Secretary: Sri Sathya Sai Dist.</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: dcebsrisatyasai@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Helpdesk: +91 8179515136</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026-2027 District Common Examination Board (DCEB), Sri Sathya Sai District. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load order matters: PDF libraries, slip generator, API client, then the page logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="slip.js"></script>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
